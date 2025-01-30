@@ -11,21 +11,6 @@ This project implements an end-to-end sentiment analysis pipeline using a fine-t
 - Includes a test script for API validation.
 
 ---
-## Project Setup
-### 1. Install Dependencies
-Run the following command to install all required libraries:
-```sh
-pip install -r requirements.txt
-```
-
-### 2. Set Up the Database
-The dataset is stored in an SQLite database. The training script creates and populates the database automatically. Ensure the script is executed before running the Flask app.
-
-```sh
-python train_model.py  # This will create 'imdb_dataset.db'
-```
-
----
 ## Data Acquisition
 We use the IMDB dataset for training and testing:
 - The dataset is loaded using the `datasets` library:
@@ -39,28 +24,28 @@ We use the IMDB dataset for training and testing:
 ---
 ## Run Instructions
 ### 1. Train the Model
-Execute the following command to fine-tune the BERT model:
-```sh
-python train_model.py
-```
-The script performs data cleaning, EDA, training, and evaluation.
+First, run the `Model training Script | Sentiment Analysis Pipeline.ipynb` file. This will generate a fine-tuned model. Save this model locally or in a drive using `save_pretrained`. 
 
 ### 2. Start the Flask Server
+After training, run `Flask_app.ipynb` and provide the saved fine-tuned model directory path to use it.
+
 Run the following command to launch the Flask API:
 ```sh
-python app.py
+    ngrok.connect(5000)
+
+    # Get the public URL
+    tunnels = ngrok.get_tunnels()
+    ngrok_url = tunnels[0].public_url
+    print(f" * Public URL: {ngrok_url}")
+
+    # Run Flask app
+    app.run(port=5000)
 ```
 The server will be accessible at `http://127.0.0.1:5000/`.
 
 ### 3. Test the API
-Use the provided test script to verify the API:
-```sh
-python test_api.py
-```
-Alternatively, you can send a manual request using `curl`:
-```sh
-curl -X POST "http://127.0.0.1:5000/predict" -H "Content-Type: application/json" -d '{"review_text": "This movie was amazing!"}'
-```
+Finally, run `Test Script for Flask Endpoints | Sentiment Analysis Pipeline.ipynb` to check if the Flask endpoints are working correctly. Provide ngrock generated public URL and review Text.
+
 Expected response:
 ```json
 {
@@ -87,32 +72,11 @@ Expected response:
 | F1 Score   | 92.1%  |
 
 ---
-## Folder Structure
-```
-├── data/                     # Dataset and database
-│   ├── imdb_dataset.db        # SQLite database
-├── models/                   # Trained models
-│   ├── bert_model/           # Fine-tuned BERT model
-├── scripts/                  # Training and testing scripts
-│   ├── train_model.py        # Model training script
-│   ├── test_api.py           # API testing script
-├── app.py                     # Flask API server
-├── requirements.txt           # Dependencies
-├── README.md                  # Project documentation
-```
+## Exploratory Data Analysis (EDA)
+![EDA](https://github.com/user-attachments/assets/bc8c6fd4-1db3-479e-ae94-f242c85042d1)
 
----
-## Future Improvements
-- Enhance model performance with additional training epochs.
-- Deploy API to a cloud platform (AWS/GCP/Azure).
-- Improve text preprocessing with advanced NLP techniques.
-- Expand dataset to include more diverse sentiment categories.
 
----
-## Contributors
-- **Your Name**  
-- Feel free to contribute via pull requests!
 
-## License
-MIT License
+
+
 
