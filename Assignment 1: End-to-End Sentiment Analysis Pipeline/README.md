@@ -9,9 +9,8 @@ This project implements an end-to-end sentiment analysis pipeline using a fine-t
 - Stores processed data in an SQLite database.
 - Deploys a Flask API for sentiment prediction.
 - Includes a test script for API validation.
-
-## Project Setup
-### 1. Install Dependencies
+- 
+### Install Dependencies
 Run the following command to install all required libraries:
 ```sh
 !pip install transformers
