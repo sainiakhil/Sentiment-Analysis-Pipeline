@@ -69,13 +69,22 @@ Expected response:
 | Accuracy   | 92.4%  |
 | Precision  | 89.2%  |
 | Recall     | 95.3%  |
-| F1 Score   | 92.1%  |
+| F1 Score   | 92.1%  |![data visialization 1](https://github.com/user-attachments/assets/577c4c48-43b3-4ea8-93ee-cea38824bcf4)
+
 
 ---
 ## Exploratory Data Analysis (EDA)
 ![EDA](https://github.com/user-attachments/assets/bc8c6fd4-1db3-479e-ae94-f242c85042d1)
 
+## Data Visualization
 
+### Bar Plot: Sentiment Distribution
+![Uploading data visialization 1.PNG…]()
+
+
+
+### Box Plot: Review Length by Sentiment
+![data visualization 2](https://github.com/user-attachments/assets/a4e33b49-8579-47ed-8654-dda7b467dac1)
 
 
 
