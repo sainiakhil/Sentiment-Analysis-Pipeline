@@ -24,7 +24,7 @@ We use the IMDB dataset for training and testing:
 ---
 ## Run Instructions
 ### 1. Train the Model
-First, run the `Model training Script | Sentiment Analysis Pipeline.ipynb` file. This will generate a fine-tuned model. Save this model locally or in a drive using `save_pretrained`. 
+First, run the [`Model training Script | Sentiment Analysis Pipeline.ipynb`](#[section-name](https://github.com/sainiakhil/Sentiment-Analysis-Pipeline/blob/main/Assignment%201%3A%20End-to-End%20Sentiment%20Analysis%20Pipeline/Model_training_Script___Sentiment_Analysis_Pipeline.ipynb)) file. This will generate a fine-tuned model. Save this model locally or in a drive using `save_pretrained`. 
 
 ### 2. Start the Flask Server
 After training, run `Flask_app.ipynb` and provide the saved fine-tuned model directory path to use it.
