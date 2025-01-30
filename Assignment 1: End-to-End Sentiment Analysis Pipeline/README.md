@@ -79,7 +79,8 @@ Expected response:
 ## Data Visualization
 
 ### Bar Plot: Sentiment Distribution
-![Uploading data visialization 1.PNG…]()
+![data visialization 1](https://github.com/user-attachments/assets/4d7f299a-01df-4968-98a3-6ebd0900857d)
+
 
 
 
